@@ -1,0 +1,132 @@
+.approvalContainer {
+  background: var(--container-bg);
+  border: 3px solid var(--accent) !important;
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  image-rendering: pixelated;
+}
+
+.approvalContainer:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.approvalContainer h3 {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.buttonContainer {
+  position: relative;
+  height: 140px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.approveButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border: 3px solid #28a745 !important;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.approveButton:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 0 rgba(255, 204, 0, 0.5);
+}
+
+.denyButton {
+  position: absolute;
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    box-shadow 0.2s ease;
+  z-index: 5;
+  border: 3px solid #dc3545 !important;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.denyButton:hover {
+  box-shadow: 4px 4px 0 rgba(255, 0, 255, 0.5);
+}
+
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+}
+
+.resetButton {
+  background: var(--soft-gray);
+  color: var(--text-highlight);
+  border: 3px solid var(--accent);
+  font-family: var(--font-pixel);
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.5rem;
+  padding: 8px 15px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.resetButton:hover {
+  background: var(--accent);
+  color: var(--background);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.messageContainer {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pixelBorder {
+  0% {
+    border-color: var(--accent);
+    box-shadow: 0 0 5px var(--accent);
+  }
+  25% {
+    border-color: #61dafb;
+    box-shadow: 0 0 10px #61dafb;
+  }
+  50% {
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px #ff00ff;
+  }
+  75% {
+    border-color: #61dafb;
+    box-shadow: 0 0 10px #61dafb;
+  }
+  100% {
+    border-color: var(--accent);
+    box-shadow: 0 0 5px var(--accent);
+  }
+}
+
+.approved {
+  border: 3px solid var(--accent);
+  animation: pixelBorder 2.5s infinite;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(97, 218, 251, 0.5);
+}

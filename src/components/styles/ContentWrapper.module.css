@@ -1,0 +1,21 @@
+.contentWrapper {
+  width: 85%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    width: 92%;
+    padding: 0 10px 30px;
+  }
+}

@@ -1,0 +1,146 @@
+:root {
+  zoom: 80%;
+  --background: #121212;
+  --container-bg: #1e1e1e;
+  --soft-gray: #2a2a2a;
+  --text-primary: #bfc9ca;
+  --text-highlight: #f8f8f8;
+  --accent: #e5c07b;
+  --font-pixel: "Press Start 2P", cursive;
+  --content-max-width: 1000px;
+  --content-side-spacing: 8%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-pixel);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 125vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nes-btn,
+.nes-container {
+  font-family: var(--font-pixel);
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+.nes-btn {
+  font-size: 0.9rem;
+  padding: 8px 15px;
+}
+
+.nes-input {
+  font-size: 0.9rem;
+  padding: 8px;
+}
+
+.nes-container {
+  margin: 15px auto;
+  padding: 15px;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--font-pixel);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.pixel-hover {
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.pixel-hover:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 0px #ffcc00, -2px -2px 0px #ff00ff;
+}
+
+.pixel-bounce:hover {
+  animation: bounce 0.3s ease infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-3px);
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--soft-gray);
+  border-top: 2px solid var(--accent);
+}
+
+.footer-links a {
+  font-size: 1.3rem;
+}

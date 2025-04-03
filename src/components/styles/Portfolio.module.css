@@ -1,0 +1,151 @@
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.project {
+  background: var(--container-bg);
+  padding: 15px;
+  border: 1px solid var(--soft-gray);
+  position: relative;
+  z-index: 10;
+}
+
+section {
+  position: relative;
+  z-index: 5;
+}
+
+.projectCard {
+  padding: 15px;
+  border: 2px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectContent h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.projectContent h3:hover {
+  transform: scale(1.2);
+  text-shadow: 1px 1px 0px #ffcc00, -1px -1px 0px #ff00ff;
+}
+
+.projectPreview {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid var(--soft-gray);
+}
+
+.projectImage {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 30, 30, 0.9);
+  color: var(--text-highlight);
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.imageOverlay p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.imageContainer:hover .imageOverlay {
+  opacity: 1;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.techItem {
+  background: var(--soft-gray);
+  color: var(--accent);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  border: 1px solid var(--accent);
+  transition: all 0.2s ease;
+  min-width: auto;
+  text-align: center;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.techItem:hover {
+  background-color: var(--accent);
+  color: var(--background);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3), 0 0 8px rgba(229, 192, 123, 0.6);
+}
+
+.marrowDiv {
+  margin-right: 6rem;
+}
+
+.clickMeDiv {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marrowLogo {
+  max-width: 70px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--text-highlight);
+  padding: 8px;
+}
+
+.marrowLogo:hover {
+  transform: scale(1.2) rotate(3deg) translate(0px, -6px);
+  box-shadow: 3px 3px 0px #ffcc00, -3px -3px 0px #ff00ff,
+    0px 0px 8px rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}

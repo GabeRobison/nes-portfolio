@@ -1,0 +1,38 @@
+.footer {
+  text-align: center;
+  padding: 12px;
+  background: var(--soft-gray);
+  border-top: 2px solid var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  z-index: 200;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.links a {
+  color: var(--text-highlight);
+  transition: all 0.3s ease-in-out;
+  font-size: 0.8rem;
+}
+
+.links span {
+  color: var(--accent);
+}
+
+.links a:hover {
+  transform: scale(1.1);
+  text-shadow: 1px 1px 0px #ffcc00, -1px -1px 0px #ff00ff;
+}

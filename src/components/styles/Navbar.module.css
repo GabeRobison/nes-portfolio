@@ -1,0 +1,60 @@
+.navbar {
+  background-color: var(--container-bg);
+  color: var(--text-highlight);
+  padding: 12px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 1rem;
+}
+
+.navbar h1 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.titleLink {
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  padding: 3px;
+}
+
+.navbar a, .navbar Link {
+  color: var(--text-primary);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 4px;
+  font-size: 0.9rem;
+}
+
+.navbar a:hover, .navbar Link:hover {
+  text-decoration: none;
+}
+
+.navbar a.active, .navbar Link.active {
+  color: var(--accent);
+  text-shadow: 1px 1px 0px rgba(255, 204, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    gap: 10px;
+  }
+
+  .navbar a, .navbar Link {
+    font-size: 0.8rem;
+  }
+}
