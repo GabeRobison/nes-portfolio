@@ -16,7 +16,9 @@ const ProjectsPage = () => {
       </div>
 
       <PortfolioProjects />
-      <ApprovalButton />
+      <div className={styles.survey}>
+        <ApprovalButton />
+      </div>
     </div>
   );
 };
